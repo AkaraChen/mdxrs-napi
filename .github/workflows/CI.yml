@@ -90,7 +90,7 @@ jobs:
     name: stable - ${{ matrix.settings.target }} - node@18
     runs-on: ${{ matrix.settings.host }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Setup node
         uses: actions/setup-node@v3
         if: ${{ !matrix.settings.docker }}
@@ -169,7 +169,7 @@ jobs:
           - '18'
     runs-on: ${{ matrix.settings.host }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -201,7 +201,7 @@ jobs:
           - '18'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -233,7 +233,7 @@ jobs:
           - '18'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -267,7 +267,7 @@ jobs:
           - '18'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
@@ -301,7 +301,7 @@ jobs:
       - build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
@@ -341,7 +341,7 @@ jobs:
           - '18'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Download artifacts
         uses: actions/download-artifact@v3
         with:
@@ -374,7 +374,7 @@ jobs:
       - build
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -413,7 +413,7 @@ jobs:
       - test-linux-arm-gnueabihf-binding
       - universal-macOS
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v6
       - name: Setup node
         uses: actions/setup-node@v3
         with:
